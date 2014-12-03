@@ -1,8 +1,8 @@
 <html>
-    <head>
-        <title>Blink innerHtml error demo</title>
-    </head>
-    <body>
+<head>
+    <title>Blink innerHtml error demo</title>
+</head>
+<body>
     <script>
         var xmlhttp;
         if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -15,7 +15,7 @@
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 debugger;
                 var result = xmlhttp.responseText;
-                var inserted = document.getElementById("demo").innerHTML = xmlhttp.responseText;
+                var inserted = document.getElementById("demo").innerHTML = xmlhttp.responseText; //this call ends with an exception
             }
         }
         xmlhttp.open("GET", "killer3.html", true);
